@@ -1,0 +1,21 @@
+Admin:  uid=admin,ou=system / secret
+Example User: Horatio Hornblower / pass
+
+The following goes into <install>/tomcat/shared/classes/alfresco-global.properties
+
+## Authentication with local Directory server
+ldap.authentication.active=true
+authentication.chain=localLDAP:ldap,alfrescoNtlm1:alfrescoNtlm
+ldap.authentication.java.naming.provider.url=ldap://localhost:10389
+ldap.authentication.userNameFormat=cn=%s,ou=people,o=sevenSeas
+
+## Synchronization of user and group info from directory server
+ldap.synchronization.active=true
+ldap.synchronization.java.naming.security.principal=uid\=admin,ou\=system
+ldap.synchronization.java.naming.security.credentials=secret
+ldap.synchronization.groupQuery=(objectclass\=groupOfUniqueNames)
+ldap.synchronization.personQuery=(objectclass\=person)
+ldap.synchronization.groupSearchBase=ou\=groups,o\=sevenSeas
+ldap.synchronization.userSearchBase=ou\=people,o\=sevenSeas
+ldap.synchronization.groupMemberAttributeName=uniquemember
+
