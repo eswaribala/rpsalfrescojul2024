@@ -6,7 +6,7 @@ The following goes into <install>/tomcat/shared/classes/alfresco-global.properti
 ## Authentication with local Directory server
 ldap.authentication.active=true
 authentication.chain=localLDAP:ldap,alfrescoNtlm1:alfrescoNtlm
-ldap.authentication.java.naming.provider.url=ldap://localhost:10389
+ldap.authentication.java.naming.provider.url=ldap://host.docker.internal:389
 ldap.authentication.userNameFormat=cn=%s,ou=people,o=sevenSeas
 
 ## Synchronization of user and group info from directory server
