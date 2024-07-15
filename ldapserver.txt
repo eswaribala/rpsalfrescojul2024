@@ -1,0 +1,2 @@
+docker run -d -p 389:10389 --name ldap-server -v apacheds_data:/var/lib/apacheds openfrontier/apacheds
+
