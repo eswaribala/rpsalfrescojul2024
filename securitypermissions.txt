@@ -1,1 +1,4 @@
 https://docs.alfresco.com/content-services/latest/admin/security/#define-permissions
+
+#restrict site creation
+docker cp public-services-security-context.xml 1e780b952e36:/usr/local/tomcat/shared/classes/alfresco/extension
