@@ -1,0 +1,44 @@
+#go to share services
+
+docker cp <share-id>:/usr/local/tomcat/shared/classes/alfresco/web-extension/share-config-custom.xml c:/alfresco
+
+#edit the following
+
+
+
+<!-- Repository Library config section -->
+   <config evaluator="string-compare" condition="RepositoryLibrary" replace="true">
+      <!--
+         Root nodeRef or xpath expression for top-level folder.
+         e.g. alfresco://user/home, /app:company_home/st:sites/cm:site1
+         If using an xpath expression, ensure it is properly ISO9075 encoded here.
+      -->
+      <root-node>alfresco://company/home</root-node>
+    
+      <tree>
+         <!--
+            Whether the folder Tree component should enumerate child folders or not.
+            This is a relatively expensive operation, so should be set to "false" for Repositories with broad folder structures.
+         -->
+         <evaluate-child-folders>false</evaluate-child-folders>
+             
+         <!--
+            Optionally limit the number of folders shown in treeview throughout Share.
+         -->
+         <maximum-folder-count>500</maximum-folder-count>
+      </tree>
+    
+      <!--
+         Whether the link to the Repository Library appears in the header component or not.
+      -->
+      <visible>false</visible>
+   </config>
+
+#transfer the file to share
+
+docker cp c:/alfresco/share-config-custom.xml <share-id>:/usr/local/tomcat/shared/classes/alfresco/web-extension
+
+#to test
+docker exec -it <share-id> bash
+#cd /usr/local/tomcat/shared/classes/alfresco/web-extension
+#cat share-config-custom.xml
