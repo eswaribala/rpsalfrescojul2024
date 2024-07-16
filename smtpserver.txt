@@ -5,6 +5,8 @@ http://localhost:1080
 #go to 
 #/usr/local/tomcat/shared/classes/alfresco-global.properties
 
+#to find container id
+docker container ls -a
 #manually modifying
 c:/>docker cp <acsid>:/usr/local/tomcat/shared/classes/alfresco-global.properties c:/alfresco
 
