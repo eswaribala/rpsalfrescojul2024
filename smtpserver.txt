@@ -8,7 +8,8 @@ http://localhost:1080
 #to find container id
 docker container ls -a
 #manually modifying
-c:/>docker cp <acsid>:/usr/local/tomcat/shared/classes/alfresco-global.properties c:/alfresco
+go to c: drive
+docker cp <acsid>:/usr/local/tomcat/shared/classes/alfresco-global.properties c:/alfresco
 
 #edit the file
 ## Outbound email config
