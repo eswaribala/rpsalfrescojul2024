@@ -1,1 +1,3 @@
+#go to eclipse Help, Install New software and Select Activity BPMN Designer 
+
 https://www.activiti.org/designer/update/
