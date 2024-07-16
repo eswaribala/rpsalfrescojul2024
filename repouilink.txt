@@ -1,3 +1,6 @@
+#alfresco doc link
+https://docs.alfresco.com/content-services/7.2/develop/share-ext-points/share-config/
+
 #go to share services
 
 docker cp <share-id>:/usr/local/tomcat/shared/classes/alfresco/web-extension/share-config-custom.xml c:/alfresco
