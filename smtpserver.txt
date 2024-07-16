@@ -5,8 +5,16 @@ http://localhost:1080
 #go to 
 #/usr/local/tomcat/shared/classes/alfresco-global.properties
 
+#manually modifying
+c:/>docker cp <acsid>:/usr/local/tomcat/shared/classes/alfresco-global.properties c:/alfresco
+
+#edit the file
 ## Outbound email config
 mail.host=host.docker.internal
 mail.port=1025
 mail.from.default=localalfresco@mycompany.com
 notification.email.siteinvite=true
+
+# copy properties file to container
+
+c:/>docker cp c:/alfresco/alfresco-global.properties <acsid>:/usr/local/tomcat/shared/classes
