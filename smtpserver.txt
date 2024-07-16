@@ -22,3 +22,10 @@ notification.email.siteinvite=true
 # copy properties file to container
 
 c:/>docker cp c:/alfresco/alfresco-global.properties <acsid>:/usr/local/tomcat/shared/classes
+
+#To verify the updates
+docker exec -it <acsid> bash
+#cd shared
+#cd classes
+#cat alfresco-global.properties
+
