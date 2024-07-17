@@ -9,3 +9,6 @@ docker cp <all-in-one-id>:/usr/local/tomcat/webapps/alfresco/WEB-INF/lib/alfresc
 #ldap server simple authentication
 uid=admin,ou=system as the BindDN 
 secret as the bind BindPassword.
+
+#modify global properties
+docker cp c:/alfresco/<property file name> <acs>:/usr/local/tomcat/shared/classes
