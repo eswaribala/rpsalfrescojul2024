@@ -1,0 +1,31 @@
+#go to /usr/local/tomcat/webpps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/share/header/share-header.get.js
+
+
+
+
+<import resource="classpath:/alfresco/site-webscripts/org/alfresco/share/imports/share-header.lib.js">
+
+model.jsonModel = {
+   rootNodeId: "share-header",
+   services: getHeaderServices(),
+   widgets: [
+      {
+         id: "SHARE_VERTICAL_LAYOUT",
+         name: "alfresco/layout/VerticalWidgets",
+         config: 
+         {
+            widgets: getHeaderModel()
+         }
+      },
+
+     {
+    id: "HEADER_CUSTOM",
+    name: "alfresco/menus/AlfMenuBarItem",
+    config: {
+       id: "HEADER_CUSTOM",
+       label: "Sponsors",
+       targetUrl: "sponsor-page"
+    }
+}
+   ]
+};
