@@ -77,9 +77,38 @@ model.jsonModel = {
 						    ]
 						  }
 						},
-						{
-						name: "aikautw/widgets/AjaxWidget"
-						}
+				{
+					name: "alfresco/layout/HorizontalWidgets",
+					config: {
+						widgetMarginLeft: "10",
+						widgetMarginRight: "10",
+						widgets: [
+							{
+								name: "aikautw/widgets/AjaxWidget"
+							},
+
+							{
+								name: "alfresco/layout/ClassicWindow",
+								widthPc: "25",
+								config: {
+									title: "Groups",
+									additionalCssClasses: "no-margin"
+								}
+							},
+							{
+								name: "alfresco/layout/ClassicWindow",
+								widthPc: "25",
+								config: {
+									title: "Users",
+									additionalCssClasses: "no-margin"
+								}
+							}
+						]
+					}
+				},
+
+
+
 						
 		    ]
 		  }
