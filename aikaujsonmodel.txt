@@ -8,10 +8,16 @@ model.jsonModel = {
 		      "widgetMarginRight": 10,
 		      "widgets": [
 		         {
-		            "name": "alfresco/logo/Logo",
+		            "name": "alfresco/html/Image",
+					"src":"aikautw/widgets/images/ctslogo.jpeg", 
+					"srcType":"aikautw/widgets/images/ctslogo.jpeg", 
 		            "widthPx": 300
 		         },
-		        
+				 /*{
+				   "name": "alfresco/logo/Logo",
+				    "widthPc": 50
+				 },*/
+				 
 				 {
 				 name: "alfresco/buttons/AlfButton",
 				 config: {
@@ -34,24 +40,44 @@ model.jsonModel = {
 				}
 		      ]
 		   }
+		},
+		
+		{
+		   name: "aikautw/widgets/StudyWidget"
+		},
+		
+		{
+		  name: "alfresco/buttons/DropDownButton",
+		  config: {
+		    hideDropDownTopics: ["SAVE"],
+		    label: "Show Form",
+		    widgets: [
+		       {
+		          name: "alfresco/forms/Form",
+		          config: {
+		             okButtonPublishTopic: "SAVE",
+		             okButtonPublishGlobal: true,
+		             widgets: [
+		                {
+		                   name: "alfresco/forms/controls/TextBox",
+		                   config: {
+		                      label: "Value",
+		                      name: "value"
+		                   }
+		                }
+		             ]
+		          }
+		       }
+		    ]
+		  }
 		}
 	]
 	
-/*widgets: [{
-name: "alfresco/buttons/AlfButton",
-config: {
-label: "Open Document"
-}
-},
-{
-   name: "alfresco/forms/controls/DateTextBox",
-   id: "VALID_DATE_VALUE_1",
-   config: {
-      name: "validDate1",
-      value: "2012-12-12",
-      label: "Valid date #1"
-   }
-}
+
+
+};
+
+
 
 
 ]
