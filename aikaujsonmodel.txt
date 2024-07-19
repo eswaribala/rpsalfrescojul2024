@@ -9,8 +9,8 @@ model.jsonModel = {
 		      "widgets": [
 		         {
 		            "name": "alfresco/html/Image",
-					"src":"aikautw/widgets/images/ctslogo.jpeg", 
-					"srcType":"aikautw/widgets/images/ctslogo.jpeg", 
+					"src":"https://via.placeholder.com/600/92c952", 
+					
 		            "widthPx": 300
 		         },
 				 /*{
@@ -47,41 +47,47 @@ model.jsonModel = {
 		},
 		
 		{
-		  name: "alfresco/buttons/DropDownButton",
+		  name: "alfresco/layout/VerticalWidgets",
 		  config: {
-		    hideDropDownTopics: ["SAVE"],
-		    label: "Show Form",
+			widgetMarginTop: "50",
+			widgetMarginBottom: "50",
 		    widgets: [
-		       {
-		          name: "alfresco/forms/Form",
-		          config: {
-		             okButtonPublishTopic: "SAVE",
-		             okButtonPublishGlobal: true,
-		             widgets: [
-		                {
-		                   name: "alfresco/forms/controls/TextBox",
-		                   config: {
-		                      label: "Value",
-		                      name: "value"
-		                   }
-		                }
-		             ]
-		          }
-		       }
+				{
+						  name: "alfresco/buttons/DropDownButton",
+						  config: {
+						    hideDropDownTopics: ["SAVE"],
+						    label: "Show Form",
+						    widgets: [
+						       {
+						          name: "alfresco/forms/Form",
+						          config: {
+						             okButtonPublishTopic: "SAVE",
+						             okButtonPublishGlobal: true,
+						             widgets: [
+						                {
+						                   name: "alfresco/forms/controls/TextBox",
+						                   config: {
+						                      label: "Value",
+						                      name: "value"
+						                   }
+						                }
+						             ]
+						          }
+						       }
+						    ]
+						  }
+						},
+						{
+						name: "aikautw/widgets/AjaxWidget"
+						}
+						
 		    ]
 		  }
-		}
+		},
+		
 	]
 	
 
-
-};
-
-
-
-
-]
-*/
 
 };
 
