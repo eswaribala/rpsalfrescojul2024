@@ -3,7 +3,7 @@ docker run -d -p 389:10389 --name ldap-server -v apacheds_data:/var/lib/apacheds
 
 # copy alfresco repository jar
 
-docker cp <all-in-one-id>:/usr/local/tomcat/webapps/alfresco/WEB-INF/lib/alfresco-repository-23.2.0.60.jar c:/alfresco
+docker cp <repositoryid>:/usr/local/tomcat/webapps/alfresco/WEB-INF/lib/alfresco-repository-23.2.0.60.jar c:/alfresco
 
 
 #ldap server simple authentication
